@@ -1,4 +1,5 @@
-# %%
+#   Práctica 1: Análisis del tiempo
+##  Realizado por María Mateos López y Andrea Sayago Butrón
 # librerías
 import os
 import requests
