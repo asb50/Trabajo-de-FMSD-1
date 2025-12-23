@@ -30,7 +30,7 @@ def PintarMenu(listaOpc):
         elif k == -1:
             print("\nDebe insertar un número entero.\n")
         else:
-            print("\nEl número debe estar entre 0 y 5.\n")
+            print(f"\nEl número debe estar entre 0 y {len(listaOpc)-1}.\n")
 
 # %%
 def ExisteApiKey():
@@ -479,7 +479,7 @@ def CalcularMedias(listadic, apikey):
     
 
 # %%
-#5 
+#5 CONSULTRAR PREDICCIONES METEREOLÓGICAS DE MUNICIPIOS
 def Asegurar_Diccionario_Municipios():
     ruta = "./datos/diccionario24.xlsx"
     url = "https://www.ine.es/daco/daco42/codmun/diccionario24.xlsx"
@@ -587,7 +587,7 @@ def Mostrar_Provincias_Municipios(df):
     print("\nListado de provincias:\n")
     for i, cod in enumerate(provincias_cod):
         nombre = codigos_provincias.get(cod, f"Provincia {cod}")
-        print(f"{i} - {nombre} ({cod})")
+        print(f"{i} - {nombre} ({cod-1})")
     return provincias_cod
 
 # %%
@@ -595,20 +595,19 @@ def Elegir_Provincia_Municipios(df):
     provincias = Mostrar_Provincias_Municipios(df)
     while True:
         try:
-            op = int(input("Elige una provincia (pon el número): "))
+            op = int(input("Elige una provincia(pon el número): "))
             if 0 <= op < len(provincias):
                 return provincias[op] 
             else:
                 print("Opción incorrecta")
         except:
             print("Debes introducir un número")
-
 # %%
 def Mostrar_Municipios_Provincia(df, provincia):
     municipios = df[df["CPRO"] == provincia].sort_values("NOMBRE")
     print("\nListado de municipios:\n")
     for _, fila in municipios.iterrows():
-        print(f"{fila['CMUN']} - {fila['NOMBRE']}")
+        print(f"{fila['NOMBRE']} (INE: {fila['CMUN']})")
     return municipios
 
 # %%
@@ -616,7 +615,7 @@ def Elegir_Municipio(df, provincia):
     municipios = df[df["CPRO"] == provincia]
 
     while True:
-        cod = input("Introduce el código INE del municipio (CMUN)(3 dígitos que aparecen delante del municipio): ")
+        cod = input("Introduce el código INE del municipio: ")
 
         if cod.isdigit() and int(cod) in municipios["CMUN"].values:
             cmun = int(cod)
@@ -626,7 +625,6 @@ def Elegir_Municipio(df, provincia):
             return codigo_municipio
         else:
             print("Código de municipio incorrecto")
-
 # %%
 def Consultar_Prediccion_Municipio(cod_municipio):
     if not ExisteApiKey():
