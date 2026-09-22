@@ -8,5 +8,5 @@ Proyecto de la asignatura **Fundamentos Matemáticos de los Sistemas de Datos** 
 - Generación de visualizaciones para la interpretación de resultados.
 
 ## Requisitos Previos
-* Python 3.9 o superior
+* Python 3.8 o superior
 * Una API Key válida de [AEMET OpenData](https://opendata.aemet.es/centrodedescargas/inicio)
