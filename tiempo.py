@@ -692,11 +692,9 @@ def Consultar_Prediccion_Municipio(cod_municipio):
 
 # %%
 #datos_ordenados = ConvertirListaEstaciones()
-#apikey = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbmRyZWEuc2F5YWdvYnV0cm9uQGFsdW0udWNhLmVzIiwianRpIjoiNTNlYzllY2YtZWY1MS00ZmQ2LTk3MzktNDY1NzJmMDY4OGRmIiwiaXNzIjoiQUVNRVQiLCJpYXQiOjE3NjI3NzE4OTMsInVzZXJJZCI6IjUzZWM5ZWNmLWVmNTEtNGZkNi05NzM5LTQ2NTcyZjA2ODhkZiIsInJvbGUiOiIifQ.2V2S519YdRnGaXy9WP55AgPtB_qI7UmkZ3bzRhWmaLI"
 #CalcularMedias(datos_ordenados,apikey)
 
 # %%
-#apikey = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbmRyZWEuc2F5YWdvYnV0cm9uQGFsdW0udWNhLmVzIiwianRpIjoiNTNlYzllY2YtZWY1MS00ZmQ2LTk3MzktNDY1NzJmMDY4OGRmIiwiaXNzIjoiQUVNRVQiLCJpYXQiOjE3NjI3NzE4OTMsInVzZXJJZCI6IjUzZWM5ZWNmLWVmNTEtNGZkNi05NzM5LTQ2NTcyZjA2ODhkZiIsInJvbGUiOiIifQ.2V2S519YdRnGaXy9WP55AgPtB_qI7UmkZ3bzRhWmaLI"
 #print(MostrarEstacionesProvinciaPrimeraVez(apikey))
 
 # %%
@@ -707,7 +705,7 @@ def main():
     print("╚══════════════════════════════════╝")
     seguir = True
     apikey = 0
-    #apikey = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbmRyZWEuc2F5YWdvYnV0cm9uQGFsdW0udWNhLmVzIiwianRpIjoiNTNlYzllY2YtZWY1MS00ZmQ2LTk3MzktNDY1NzJmMDY4OGRmIiwiaXNzIjoiQUVNRVQiLCJpYXQiOjE3NjI3NzE4OTMsInVzZXJJZCI6IjUzZWM5ZWNmLWVmNTEtNGZkNi05NzM5LTQ2NTcyZjA2ODhkZiIsInJvbGUiOiIifQ.2V2S519YdRnGaXy9WP55AgPtB_qI7UmkZ3bzRhWmaLI"
+    
     while seguir:
         listaOpciones = ["Salir",
                         "Introducir API key",
